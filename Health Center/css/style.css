@@ -1,0 +1,417 @@
+/* Start Globel Style */
+:root {
+  --main-color: #b4cf5d;
+  --hover-color: #87a32b;
+}
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Tajawal", sans-serif;
+  direction: rtl;
+}
+main {
+  padding: 20px 0px;
+}
+.special-heading {
+  color: var(--main-color);
+  opacity: 0.6;
+  font-weight: 800;
+  text-align: center;
+  font-size: 100px;
+  letter-spacing: -3px;
+  margin: 0;
+}
+.special-paragraph {
+  margin: 10px 0 0 0;
+  font-size: 20px;
+  text-align: justify;
+  line-height: 1.3;
+  padding: 0px 10px;
+  color: #797979;
+  line-height: 1.3;
+}
+hr {
+  width: 25%;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  list-style-type: none;
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.social-media-links,
+.contact-info {
+  display: flex;
+  justify-content: space-evenly;
+}
+.social-media-links i,
+.contact-info i {
+  color: #333; /* Default icon color */
+  font-size: 20px; /* Adjust icon size */
+  transition: transform 0.3s, color 0.3s; /* Smooth transition for transform and color */
+}
+.social-media-links a,
+.contact-info a {
+  font-weight: bold;
+}
+.social-media-links i:hover,
+.contact-info i:hover {
+  color: #6c7550; /* Change color on hover */
+  transform: scale(1.2); /* Slightly enlarge the icon */
+}
+i.fa-phone:hover {
+  color: green;
+}
+i.fa-linkedin:hover {
+  color: rgb(64, 54, 197);
+}
+i.fa-facebook:hover {
+  color: blue;
+}
+i.fa-twitter:hover {
+  color: rgb(50, 153, 187);
+}
+i.fa-instagram:hover {
+  color: rgb(180, 30, 168);
+}
+i.fa-envelope:hover {
+  color: #5c5959;
+}
+i.fa-map-marker:hover {
+  color: #d12020;
+}
+/* small */
+
+@media (max-width: 767px) {
+  .special-heading {
+    font-size: 60px;
+  }
+  .special-heading + p {
+    margin: -15px 0 0 0;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 780px;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Globel Style */
+
+/* start header ( nav )*/
+.navbar .toggle-btn {
+  display: none;
+}
+.navbar .toggled-links {
+  display: none;
+}
+.navbar .toggled-links .close-btn {
+  margin-right: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.navbar .toggled-links ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .toggled-links ul li {
+  padding: 15px 0;
+}
+.navbar .toggled-links ul li a {
+  font-weight: bold;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .contact-btn {
+  background-color: var(--main-color);
+  padding: 10px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+.navbar .contact-btn a {
+  color: #ffffff;
+}
+.navbar .contact-btn:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+.navbar .contact-btn:hover a {
+  color: #fff;
+}
+.navbar .contact-btn a {
+  font-weight: bold;
+}
+.navbar .links {
+  width: 50%;
+}
+.navbar .links ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .links ul a {
+  font-weight: bold;
+  position: relative;
+}
+.navbar .links .active-link {
+  position: relative;
+  color: var(--main-color);
+}
+.navbar .links .active-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  color: var(--main-color);
+  bottom: 0;
+  right: 0;
+  transition: 0.3s;
+}
+.navbar .links ul li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  background-color: var(--main-color);
+  bottom: 0;
+  right: 0;
+  transition: 0.3s;
+}
+.navbar .links ul li a:hover::before {
+  height: 1px;
+  transform: scale(1.2); /* Slightly enlarge the icon */
+}
+.navbar .logo {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  bottom: 10px;
+}
+.navbar .logo img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .navbar .links {
+    display: none;
+  }
+  .navbar .toggled-links {
+    display: none;
+    padding-top: 30px;
+    background-color: var(--main-color);
+    width: 75%;
+    flex-direction: column;
+    top: 1px;
+    right: 1px;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 1;
+  }
+  .navbar .toggled-links ul {
+    padding-top: 0px;
+  }
+  .navbar .contact-btn {
+    display: none;
+  }
+  .navbar .toggle-btn {
+    display: block;
+    font-weight: bold;
+    font-size: 23px;
+    cursor: pointer;
+  }
+  .toggle-contact-btn a {
+    color: #eee;
+  }
+  .navbar .toggled-links ul li {
+    width: 75%;
+  }
+  .navbar .toggled-links ul li .active-link {
+    color: #fafafa;
+  }
+  .navbar .toggled-links ul li:not(:last-child) {
+    text-align: center;
+    border-bottom: 1px solid #fafafa;
+  }
+  .navbar .toggled-links ul li a:hover {
+    color: #fafafa;
+    font-weight: bold;
+  }
+  .toggle-contact-btn {
+    background-color: #6c7550;
+    padding: 10px;
+    border-radius: 15px;
+    width: 80%;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .toggle-contact-btn:hover {
+    background-color: #5a6341; /* Darker shade for hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+  }
+  .social-media-links,
+  .contact-info {
+    margin-top: 15px;
+    direction: ltr;
+  }
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-info p {
+    margin-top: 5px;
+    font-weight: bold;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end header ( nav ) */
+
+/* start landing */
+.landing {
+  background-color: #fff;
+}
+.landing {
+  background-color: #f6f6f6;
+}
+.landing .container {
+  display: flex;
+  justify-content: space-between;
+}
+.landing .container .carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 50rem;
+  max-width: 600px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.landing .container .carousel .carousel-inner {
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s ease;
+}
+.landing .container .carousel-img {
+  min-width: 100%;
+}
+.landing .container .carousel-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
+.landing .container .home {
+  width: 353px;
+  display: flex;
+}
+.landing .container .landing-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-right: 40px;
+}
+.landing .container .landing-details .contact-info {
+  flex-direction: column;
+  direction: ltr;
+}
+@media (max-width: 767px) {
+  .landing .container {
+    flex-direction: column;
+  }
+  .landing .container .carousel {
+    width: 80%;
+    max-width: 400px;
+    margin: auto;
+  }
+  .landing .container .landing-details {
+    display: block;
+    padding-right: 0px;
+  }
+  .landing .container .landing-details .home {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .landing .container .landing-details .home-content h1 {
+    font-size: 25px;
+  }
+  .landing .container .landing-details h3,
+  .landing .container .landing-details .home-content h3 {
+    text-align: center;
+  }
+  .landing .container .landing-details .social-media-links,
+  .landing .container .landing-details h3 {
+    margin: 20px 0;
+  }
+  .landing .container .landing-details .last-line {
+    display: none;
+  }
+}
+/* end landing */
+
+/* start who section */
+.who {
+  padding: 30px 0;
+}
+.who .container {
+}
+.who .container .who-details {
+}
+.who .container .who-details .who-img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+.who .container .who-details .who-img img {
+  width: 80%;
+  border-radius: 10px;
+}
+.who .container .who-details .who-content {
+}
+.who .container .who-details .who-content h3 {
+  margin: 10px;
+  font-size: 25px;
+}
+/* end who section */
