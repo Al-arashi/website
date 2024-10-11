@@ -492,6 +492,7 @@ i.fa-map-marker:hover {
 }
 .reserve-section .form-container form .form-group .input-container {
   border: 1px solid var(--main-color);
+  background-color: white;
 }
 .reserve-section .form-container form .form-group input,
 .reserve-section .form-container form .form-group textarea {
